@@ -29,5 +29,8 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5"
+  },
+  "engines": {
+    "node": "^12.18.1"
   }
 }
