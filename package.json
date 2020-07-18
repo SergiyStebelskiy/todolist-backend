@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/SergiyStebelskiy/todolist-backend#readme",
   "dependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/node": "^7.10.5",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -28,7 +26,11 @@
     "mongoose": "^5.9.25",
     "nodemon": "^2.0.4"
   },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5"
+  },
   "engines": {
-    "node": "12.18.1"
+    "node": "10.x"
   }
 }
