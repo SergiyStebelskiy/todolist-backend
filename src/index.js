@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DB_PATH, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
