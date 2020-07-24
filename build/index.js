@@ -12,6 +12,8 @@ var _todoListRoutes = _interopRequireDefault(require("./routes/todoListRoutes"))
 
 var _dotenv = _interopRequireDefault(require("dotenv"));
 
+var _cors = _interopRequireDefault(require("cors"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv.default.config();
@@ -25,6 +27,7 @@ _mongoose.default.connect(process.env.MONGODB_URI, {
   useFindAndModify: false
 });
 
+app.use((0, _cors.default)());
 app.use(_bodyParser.default.urlencoded({
   extended: true
 }));
@@ -32,8 +35,8 @@ app.use(_bodyParser.default.json());
 (0, _todoListRoutes.default)(app);
 app.use(function (req, res) {
   res.status(404).send({
-    status: '404',
-    url: req.originalUrl + ' not found'
+    status: "404",
+    url: req.originalUrl + " not found"
   });
 });
 app.listen(process.env.PORT, () => console.log("server started"));
