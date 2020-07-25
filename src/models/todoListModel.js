@@ -10,10 +10,9 @@ const TaskSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	status: {
-		type: String,
-		enum: [ "new", "in_progress", "done" ],
-		default: "new"
+	checked: {
+		type: Boolean,
+		default: false
 	}
 });
 
