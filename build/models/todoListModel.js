@@ -8,16 +8,15 @@ const Schema = _mongoose.default.Schema;
 const TaskSchema = new Schema({
   name: {
     type: String,
-    required: 'Kindly enter the name of the task'
+    required: "Name is required"
   },
   Created_date: {
     type: Date,
     default: Date.now
   },
-  status: {
-    type: String,
-    enum: ['pending', 'ongoing', 'completed'],
-    default: 'pending'
+  checked: {
+    type: Boolean,
+    default: false
   }
 });
-module.exports = _mongoose.default.model('Tasks', TaskSchema);
+module.exports = _mongoose.default.model("Tasks", TaskSchema);
